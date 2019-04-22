@@ -9,7 +9,6 @@ const router = new Router();
 
 const clients = new Set();
 router.get('/subscribe', async (ctx, next) => {
-  console.log(ctx);
   const msg = await new Promise(resolve => {
     clients.add(resolve);
   });
